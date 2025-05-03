@@ -1,0 +1,11 @@
+name: MenuApi
+version: '${project.version}'
+main: dipper.MenuApi.MenuApi
+api-version: 1.19
+authors: [Dipper]
+commands:
+  kill:
+    description: Kills the player
+    usage: /kill
+    permission: menuapi.kill
+    permission-message: You do not have permission to use this command.
