@@ -9,11 +9,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-public abstract class SimpleMenu implements Menu {
+public abstract class DipperMenu implements Menu {
     private final Map<Integer, Consumer<Player>> actions = new HashMap<>();
     private final Inventory inventory;
 
-    public SimpleMenu(Rows rows, String title) {
+    public DipperMenu(Rows rows, String title) {
         this.inventory = Bukkit.createInventory(this, rows.getSize());
     }
 

@@ -4,14 +4,12 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import dipper.MenuApi.menu.SimpleMenu;
+import dipper.MenuApi.menu.DipperMenu;
 
-public class killmenu extends SimpleMenu{
+public class killmenu extends DipperMenu{
     public killmenu() {
         super(Rows.THREE, "Kill Menu");
     }
-
-
 
     @Override
     public void onSetItem() {
@@ -20,7 +18,8 @@ public class killmenu extends SimpleMenu{
         meta.setDisplayName("Kill Item");
         killitem.setItemMeta(meta);
 
-        setItem(13, killitem, player -> player.setHealth(0)); // Set item in slot 13 to null and kill the player
-        //excute when player click the item
+        setItem(13, killitem, player -> {
+            player.setHealth(0);
+        }); // Set item in slot 13 to null and kill the player
     }
 }
